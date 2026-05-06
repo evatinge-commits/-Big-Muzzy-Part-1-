@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Microsoft YaHei", "ZCOOL KuaiLe", sans-serif;
+  --color-brand-pink: #ffdae9;
+  --color-brand-blue: #d4f1f9;
+  --color-brand-yellow: #fff9c4;
+  --color-brand-green: #e8f5e9;
+  --color-brand-purple: #f3e5f5;
+  --color-bubble-pink: #fce4ec;
+  --color-bubble-blue: #e1f5fe;
+}
+
+@layer base {
+  body {
+    @apply bg-pink-50 min-h-screen text-gray-700 overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.4) 0%, transparent 15%),
+      radial-gradient(circle at 80% 70%, rgba(135, 206, 250, 0.4) 0%, transparent 15%),
+      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM10 25c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm20 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z' fill='%23ffccd5' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+.kawaii-shadow {
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.kawaii-btn {
+  @apply transition-all duration-200 active:translate-y-1 active:shadow-none cursor-pointer;
+}
+
+.word-blob {
+  @apply px-4 py-2 rounded-2xl font-bold text-lg shadow-sm border-2 border-white;
+}
+
+/* Custom Rainbow Progress */
+.rainbow-gradient {
+  background: linear-gradient(90deg, #ff9aa2, #ffb7b2, #ffdac1, #e2f0cb, #b5ead7, #c7ceea);
+}
+
