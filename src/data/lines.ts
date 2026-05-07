@@ -3,23 +3,26 @@ export interface MuzzyLine {
   english: string;
   chinese: string;
   phonetic: string;
+  audioSrc?: string; // 预留原声链接位置
+  speaker?: 'muzzy' | 'king' | 'queen' | 'sylvia' | 'corvax' | 'bob'; // 角色标记
 }
 
 export const MUZZY_LINES: MuzzyLine[] = [
-  { order: 1, english: "How do you do?", chinese: "你好！", phonetic: "haʊ duː juː duː" },
-  { order: 2, english: "I'm the King.", chinese: "我是国王。", phonetic: "aɪm ðə kɪŋ" },
-  { order: 3, english: "I'm the King of Gondoland.", chinese: "我是贡多兰的国王。", phonetic: "aɪm ðə kɪŋ ɒv ˈɡɒndəlænd" },
-  { order: 4, english: "I'm the Queen.", chinese: "我是王后。", phonetic: "aɪm ðə kwiːn" },
-  { order: 5, english: "Good night.", chinese: "晚安。", phonetic: "ɡʊd naɪt" },
-  { order: 6, english: "Hello.", chinese: "你好。", phonetic: "həˈləʊ" },
-  { order: 7, english: "I'm Princess Sylvia.", chinese: "我是西尔维娅公主。", phonetic: "aɪm ˌprɪnˈses ˈsɪlviə" },
-  { order: 8, english: "I'm Bob.", chinese: "我是鲍勃。", phonetic: "aɪm bɒb" },
-  { order: 9, english: "I'm the gardener.", chinese: "我是园丁。", phonetic: "aɪm ðə ˈɡɑːdnə" },
-  { order: 10, english: "I'm Corvax.", chinese: "我是科瓦克斯。", phonetic: "aɪm ˈkɔːvæks" },
-  { order: 11, english: "Thank you, Corvax.", chinese: "谢谢你，科瓦克斯。", phonetic: "θæŋk juː ˈkɔːvæks" },
-  { order: 12, english: "Hi!", chinese: "嗨！", phonetic: "haɪ" },
-  { order: 13, english: "I'm Muzzy.", chinese: "我是马齐。", phonetic: "aɪm ˈmʌzi" },
-  { order: 14, english: "Big Muzzy.", chinese: "大块头马齐。", phonetic: "bɪɡ ˈmʌzi" },
+  { order: 1, english: "How do you do?", chinese: "你好！", phonetic: "haʊ duː juː duː", speaker: 'king' },
+  { order: 2, english: "I'm the King.", chinese: "我是国王。", phonetic: "aɪm ðə kɪŋ", speaker: 'king' },
+  { order: 3, english: "I'm the King of Gondoland.", chinese: "我是贡多兰的国王。", phonetic: "aɪm ðə kɪŋ ɒv ˈɡɒndəlænd", speaker: 'king' },
+  { order: 4, english: "I'm the Queen.", chinese: "我是王后。", phonetic: "aɪm ðə kwiːn", speaker: 'queen' },
+  { order: 5, english: "Good night.", chinese: "晚安。", phonetic: "ɡʊd nait", speaker: 'queen' },
+  { order: 6, english: "Hello.", chinese: "你好。", phonetic: "həˈləʊ", speaker: 'bob' },
+  { order: 7, english: "I'm Princess Sylvia.", chinese: "我是西尔维娅公主。", phonetic: "aɪm ˌprɪnˈses ˈsɪlviə", speaker: 'sylvia' },
+  { order: 8, english: "I'm Bob.", chinese: "我是鲍勃。", phonetic: "aɪm bɒb", speaker: 'bob' },
+  { order: 9, english: "I'm the gardener.", chinese: "我是园丁。", phonetic: "aɪm ðə ˈɡɑːdnə", speaker: 'bob' },
+  { order: 10, english: "I'm Corvax.", chinese: "我是科瓦克斯。", phonetic: "aɪm ˈkɔːvæks", speaker: 'corvax' },
+  { order: 11, english: "Thank you, Corvax.", chinese: "谢谢你，科瓦克斯。", phonetic: "θæŋk juː ˈkɔːvæks", speaker: 'queen' },
+  { order: 12, english: "Hi!", chinese: "嗨！", phonetic: "haɪ", speaker: 'muzzy' },
+  { order: 13, english: "I'm Muzzy.", chinese: "我是马齐。", phonetic: "aɪm ˈmʌzi", speaker: 'muzzy' },
+  { order: 14, english: "Big Muzzy.", chinese: "大块头马齐。", phonetic: "bɪɡ ˈmʌzi", speaker: 'muzzy' },
+  // ... 其他行可以后续根据主要角色补充 speaker 标记
   { order: 15, english: "Good morning.", chinese: "早上好。", phonetic: "ɡʊd ˈmɔːnɪŋ" },
   { order: 16, english: "Good afternoon.", chinese: "下午好。", phonetic: "ɡʊd ˌɑːftəˈnuːn" },
   { order: 17, english: "Good evening.", chinese: "晚上好。", phonetic: "ɡʊd ˈiːvnɪŋ" },
@@ -113,3 +116,4 @@ export const MUZZY_LINES: MuzzyLine[] = [
   { order: 105, english: "Follow me!", chinese: "跟我来！", phonetic: "ˈfɒləʊ miː" },
   { order: 106, english: "Bye!", chinese: "再见！", phonetic: "baɪ" }
 ];
+

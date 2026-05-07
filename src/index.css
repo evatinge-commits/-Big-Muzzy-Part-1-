@@ -29,8 +29,18 @@
   @apply transition-all duration-200 active:translate-y-1 active:shadow-none cursor-pointer;
 }
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
 .word-blob {
-  @apply px-4 py-2 rounded-2xl font-bold text-lg shadow-sm border-2 border-white;
+  @apply px-4 py-2 rounded-2xl font-bold text-lg shadow-sm border-2 border-white select-none;
 }
 
 /* Custom Rainbow Progress */
